@@ -90,7 +90,7 @@ function Chat() {
     listRef.current?.scrollTo({ top: listRef.current.scrollHeight, behavior: 'smooth' })
   }, [messages, thinking])
 
-  const send = async ()n  => {
+  const send = async () => {
     if (!input.trim() || thinking) return
     const userMsg = { role: 'user', content: input.trim(), time: new Date().toLocaleTimeString() }
     setMessages((m) => [...m, userMsg])
